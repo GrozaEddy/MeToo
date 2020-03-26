@@ -3,7 +3,7 @@ from flask_wtf import FlaskForm
 from flask_login import LoginManager, login_user, logout_user, current_user, login_required
 from wtforms import StringField, PasswordField, SubmitField, TextAreaField, BooleanField
 from wtforms.validators import DataRequired
-from data import db_session, users #, news
+from data import db_session, users  # , news
 import datetime as dt
 
 app = Flask(__name__)
@@ -37,7 +37,7 @@ class LoginForm(FlaskForm):
 def base():
     param = {}
     param['title'] = 'MeToo'
-    return render_template('base.html', **param)
+    return render_template('main.html', **param)
 
 
 @app.route('/login')
